@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.LoginActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Necesitas tener creada una cuenta para iniciar la aplicación"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:paddingBottom="5dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="CREAR CUENTA"
+            android:textColor="@android:color/white"
+            android:background="@color/colorPrimary"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#C8C9CB"
+            android:layout_width="match_parent"
+            android:layout_height="1dp" />
+        <EditText
+            android:id="@+id/LogEdtUserName"
+            android:layout_marginTop="20dp"
+            android:hint="Usuario"
+            android:inputType="textCapCharacters"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <requestFocus/>
+        </EditText>
+        <EditText
+            android:id="@+id/LogEdtUserPass"
+            android:drawableLeft="@drawable/ic_action_key"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="5dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword|textCapCharacters"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <CheckBox
+            android:id="@+id/LogChbRecord"
+            android:checked="false"
+            android:padding="5dp"
+            android:text="Recordarme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="bottom"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:text="LOGIN"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:layout_gravity="bottom"
+                android:id="@+id/LogBtnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

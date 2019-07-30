@@ -11,9 +11,6 @@ public abstract class UsuarioModel {
     Date usu_fecreg;
     boolean usu_estcod;
 
-    public UsuarioModel(String usu_codigo) {
-        this.usu_codigo = usu_codigo;
-    }
 
     public String getUsu_codigo() {
         return usu_codigo;
