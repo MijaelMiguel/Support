@@ -17,7 +17,7 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btnLogin;
+    Button btnLogin, btnRegistro;
     EditText txtUser, txtPass;
 
     @Override
@@ -27,6 +27,7 @@ public class LoginActivity extends AppCompatActivity {
 
         // Asociar Object XML -> Java
         btnLogin = findViewById(R.id.LogBtnLogin);
+        btnRegistro = findViewById(R.id.LogBtnRegistro);
         txtUser = findViewById(R.id.LogEdtUserName);
         txtPass = findViewById(R.id.LogEdtUserPass);
         //Evento Click
@@ -37,6 +38,16 @@ public class LoginActivity extends AppCompatActivity {
                 new Hilo().execute(txtUser.getText().toString(),
                         txtPass.getText().toString()
                 );
+            }
+        });
+
+        //EL REGISTRO EMPIESA AQUI
+        btnRegistro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent regView = new Intent(getApplicationContext(),RegistroActivity.class);
+                startActivity(regView);
+
             }
         });
     }

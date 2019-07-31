@@ -24,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/LogBtnRegistro"
             android:text="CREAR CUENTA"
             android:textColor="@android:color/white"
             android:background="@color/colorPrimary"

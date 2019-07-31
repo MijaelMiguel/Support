@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".View.RegistroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="20dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="110dp">
+
+        <TextView
+            android:id="@+id/TvNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombres"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/EtNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/TvApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apellidos"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/EtApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Apellidos"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/TvCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correo"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/EtCorreo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Correo"
+            android:inputType="textPersonName" />
+
+        <TextView
+        android:id="@+id/TvPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/EtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/TvTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Teléfono"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/EtTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Teléfono"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnregistrar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="REGISTRAR" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
