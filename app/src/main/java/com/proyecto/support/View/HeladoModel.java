@@ -17,6 +17,8 @@ public class HeladoModel {
 
     }
 
+
+
     public String getNombre() {
         return nombre;
     }

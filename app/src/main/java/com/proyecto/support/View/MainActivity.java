@@ -1,22 +1,24 @@
 package com.proyecto.support.View;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import com.proyecto.support.R;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<HeladoModel> lst=new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,9 +35,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-//1
+
         // lista de datos
-        ArrayList<HeladoModel> lst=new ArrayList<>();
+
         // ArrayList<>
         // HeladoModel miobj = new H+eladoModel();
         lst.add(new HeladoModel("LADRON",R.drawable.ladron));
@@ -55,7 +57,17 @@ public class MainActivity extends AppCompatActivity {
         rv.setHasFixedSize(true);
         RecyclerView.LayoutManager lym= new LinearLayoutManager(this);
         rv.setLayoutManager(lym);
+
         rv.setAdapter(ad);
+
+        ad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Click CardView",Toast.LENGTH_LONG).show();
+                Intent windowInfo = new Intent(MainActivity.this,InfoActivity.class);
+                startActivity(windowInfo);
+            }
+        });
 
 
 

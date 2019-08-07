@@ -2,5 +2,6 @@
     <string name="app_name">Support</string>
     <string name="action_settings">Settings</string>
     <string name="todos">TODO</string>
+    <string name="title_activity_maps">MapaAusralia</string>
 
 </resources>
