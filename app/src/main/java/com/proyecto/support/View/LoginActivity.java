@@ -17,6 +17,8 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
 
+    public String strmsg;
+
     Button btnLogin, btnRegistro;
     EditText txtUser, txtPass;
 
@@ -102,12 +104,13 @@ public class LoginActivity extends AppCompatActivity {
             try {
 
                 boolean bstatus = s.getBoolean("status");
-                String strmsg = s.getString("message");
+                 strmsg = s.getString("data");
                 Toast.makeText(getApplicationContext(),
                         strmsg, Toast.LENGTH_LONG).show();
 
                 if(bstatus == true){ //si Login OK
                     Intent x = new Intent(getApplicationContext(),MainActivity.class);
+                    x.putExtra("Data",strmsg);
                     startActivity(x);
                 }
             }catch(Exception e){

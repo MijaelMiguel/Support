@@ -19,6 +19,8 @@ import com.proyecto.support.R;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<HeladoModel> lst=new ArrayList<>();
+
+    String dataRecUsuLogin;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         //10 crear adapter
         SupportAdapter ad= new SupportAdapter(lst);
         //setear el recyclerview
-        RecyclerView rv =findViewById(R.id.lista);
+        final RecyclerView rv =findViewById(R.id.lista);
         rv.setHasFixedSize(true);
         RecyclerView.LayoutManager lym= new LinearLayoutManager(this);
         rv.setLayoutManager(lym);
@@ -63,8 +65,12 @@ public class MainActivity extends AppCompatActivity {
         ad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"Click CardView",Toast.LENGTH_LONG).show();
+                dataRecUsuLogin = getIntent().getStringExtra("Data");
+                Toast.makeText(getApplicationContext(),"Alerta",Toast.LENGTH_LONG).show();
                 Intent windowInfo = new Intent(MainActivity.this,InfoActivity.class);
+                windowInfo.putExtra("Titulo",lst.get(rv.getChildAdapterPosition(v)).getNombre());
+                windowInfo.putExtra("DataMain",dataRecUsuLogin);
+
                 startActivity(windowInfo);
             }
         });
